@@ -7,8 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.cofflyz.R
 
+// Contoh untuk OnboardingFragment1
 class OnboardingFragment3 : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.onboarding_screen3, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_onboarding_3, container, false)
     }
 }
+

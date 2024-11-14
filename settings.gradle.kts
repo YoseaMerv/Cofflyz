@@ -22,4 +22,12 @@ dependencyResolutionManagement {
 
 rootProject.name = "Cofflyz"
 include(":app")
- 
+buildscript {
+    repositories {
+        google()  // Repositori Google untuk Firebase
+        mavenCentral()
+    }
+    dependencies {
+        classpath ("com.google.gms:google-services:4.4.2") // Plugin Google Services
+    }
+}

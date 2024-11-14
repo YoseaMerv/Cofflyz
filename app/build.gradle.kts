@@ -61,6 +61,8 @@ dependencies {
     implementation ("androidx.navigation:navigation-ui-ktx:2.5.3") // Ganti dengan versi terbaru
     implementation ("com.google.android.material:material:1.6.0")
     implementation("com.tbuonomo:dotsindicator:5.0")
+    implementation ("com.google.firebase:firebase-auth:21.0.8")
+
 
     implementation (libs.androidx.viewpager2)
     implementation (libs.material.v140)
