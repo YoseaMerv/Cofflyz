@@ -37,6 +37,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
@@ -50,22 +51,24 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.activity)
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.5.3")
+    implementation ("com.google.android.material:material:1.6.1")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.5.3") // Ganti dengan versi terbaru
+    implementation ("androidx.navigation:navigation-ui-ktx:2.5.3") // Ganti dengan versi terbaru
+    implementation ("com.google.android.material:material:1.6.0")
+    implementation("com.tbuonomo:dotsindicator:5.0")
+
+    implementation (libs.androidx.viewpager2)
+    implementation (libs.material.v140)
+    implementation(libs.androidx.annotation)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Firebase Authentication
-    implementation ("com.google.firebase:firebase-auth-ktx")
 
-    // CameraX
-    implementation ("androidx.camera:camera-camera2:1.0.0")
-    implementation ("androidx.camera:camera-lifecycle:1.0.0")
-    implementation ("androidx.camera:camera-view:1.0.0")
-
-    // UCrop
-    implementation ("com.github.yalantis:ucrop:2.2.6")
-
-    // Room Database
-    implementation ("androidx.room:room-runtime:2.4.0")
-    kapt ("androidx.room:room-compiler:2.4.0")
 }
