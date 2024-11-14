@@ -18,6 +18,8 @@
         android:src="@drawable/cofflyzelogo1" />
 
     <!-- Ilustrasi -->
+
+    <!-- Field Username -->
     <ImageView
         android:id="@+id/illustrationImageView"
         android:layout_width="324dp"
@@ -26,7 +28,6 @@
         android:layout_marginBottom="32dp"
         android:src="@drawable/onboard3" />
 
-    <!-- Field Username -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

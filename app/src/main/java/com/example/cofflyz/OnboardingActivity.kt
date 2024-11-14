@@ -2,10 +2,11 @@ package com.example.cofflyz
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-
+import com.example.cofflyz.ui.login.LoginActivity
 class OnboardingActivity : AppCompatActivity() {
 
     private lateinit var viewPager: ViewPager2
@@ -17,7 +18,6 @@ class OnboardingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_onboarding)
 
         supportActionBar?.hide()
-        setContentView(R.layout.activity_onboarding)
 
         // Inisialisasi ViewPager2 dan adapter
         viewPager = findViewById(R.id.viewPager)
@@ -33,12 +33,12 @@ class OnboardingActivity : AppCompatActivity() {
             if (viewPager.currentItem < 2) {
                 viewPager.currentItem += 1 // Pindah ke halaman berikutnya
             } else {
-                // Jika sudah di halaman terakhir, selesai onboarding
+                // Jika sudah di halaman terakhir, selesai onboarding, buka login
                 saveOnboardingStatus(true)
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, LoginActivity::class.java)  // Arahkan ke LoginActivity
                 startActivity(intent)
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-                finish()
+                finish() // Tutup OnboardingActivity
             }
         }
 
@@ -58,6 +58,13 @@ class OnboardingActivity : AppCompatActivity() {
                     nextButton.text = "Sign In"
                 } else {
                     nextButton.text = "Next"
+                }
+
+                // Menyembunyikan tombol "Back" pada halaman pertama
+                if (position == 0) {
+                    backButton.visibility = View.INVISIBLE
+                } else {
+                    backButton.visibility = Button.VISIBLE
                 }
             }
         })
